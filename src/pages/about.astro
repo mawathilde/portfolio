@@ -5,54 +5,68 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="À propos - Mathilde Avron" description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="À propos"
+				tagline="Vous voulez en savoir plus sur moi ?"
 			>
 				<img
 					width="1553"
 					height="873"
 					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
+					alt="Mathilde Avron in front of a mirror"
 				/>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Qui suis-je?</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Je m'apelle Mathilde Avron, je suis actuellement en 3ème année de BUT informatique à l'IUT A de Villeneuve d'Ascq.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Formations</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<h3 class="section-subtitle">IUT A de Villeneuve d'Ascq - BUT Informatique</h3>
+					<span>Septembre 2023 - Juin 2024</span>
+					<p>
+						Compétences acquises : Spring Boot, Mongo DB, React, Terraform, Rust, GitHub CI/CD, Qualité Développement/Algorithmique, Modélisation Mathématique, Traitement d'images.
+					</p>
+				</div>
+				<div class="content">
+					<h3 class="section-subtitle">Lycée Ozanam - BTS SNIR</h3>
+					<span>Septembre 2021 - Juin 2023</span>
+					<p>
+						Compétences acquises : PHP, C, C++, SQL, Réseaux, Systèmes (Linux), UML.
+					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Expériences</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<h3 class="section-subtitle">Stage - CARSAT Hauts de France</h3>
+					<span>11 mars 2024 - 28 juin 2024</span>
+					<p>
+						Stage de fin de 3ème année de BUT Informatique. Développement d'une application en PHP 8.3.
+					</p>
+				</div>
+				<div class="content">
+					<h3 class="section-subtitle">Emploi étudiant - Auchan Roncq</h3>
+					<span>Juillet 2023 - <b>Aujourd'hui</b></span>
+					<p>
+						Hotesse relation clientèle, c'est à dire caissière.
+					</p>
+				</div>
+				<div class="content">
+					<h3 class="section-subtitle">Stage - CARSAT Hauts de France</h3>
+					<span>Mai 2022 - Juin 2022</span>
+					<p>
+						Stage de fin de 1ère année de BTS SNIR. Gestion des postes de travail, et des potentiels problèmes.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -85,6 +99,12 @@ import Hero from '../components/Hero.astro';
 		grid-column-start: 1;
 		font-size: var(--text-xl);
 		color: var(--gray-0);
+	}
+	
+	.section-subtitle {
+		font-size: var(--text-m);
+		margin-bottom: 6px;
+		color: var(--gray-200);
 	}
 
 	.content {
