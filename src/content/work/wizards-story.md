@@ -1,7 +1,7 @@
 ---
 title: Wizards Story
 publishDate: 2024-05-22
-img: /assets/stock-2.jpg
+img: /assets/ws-cover.jpg
 img_alt: Wizards Story Banner
 description: |
   Wizards Story est un serveur RolePlay Minecraft sous version moddée. 
