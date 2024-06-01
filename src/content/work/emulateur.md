@@ -3,7 +3,7 @@ title: Emulateur d'un processeur
 publishDate: 2023-12-20
 img: https://static.fnac-static.com/multimedia/Images/FD/Comete/66339/CCP_IMG_ORIGINAL/811761.jpg
 img_alt: Emulateur d'un processeur
-description: WIP
+description: CodeWar, où nous avons programmé la base d'un émulateur de processeur sur une architecture simplifiée. Le CPU, la mémoire et les instructions sont les éléments clés de ce projet universitaire.
 tags:
   - Projet universitaire
   - Émulation

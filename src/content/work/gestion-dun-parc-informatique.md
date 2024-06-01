@@ -3,7 +3,7 @@ title: Gestion énergétique d’un parc Informatique
 publishDate: 2023-06-01
 img: /assets/diagramme-energie.png
 img_alt: Gestion d'un parc informatique
-description: WIP
+description: Contrôler et optimiser la consommation électrique globale d’un parc informatique.
 tags:
   - Projet BTS
 ---
