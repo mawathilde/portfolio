@@ -7,9 +7,10 @@ interface Props {
 	color?: string;
 	gradient?: boolean;
 	size?: string;
+	tooltip?: string;
 }
 
-const { color = 'currentcolor', gradient, icon, size } = Astro.props;
+const { color = 'currentcolor', gradient, icon, size, tooltip } = Astro.props;
 const iconPath = iconPaths[icon];
 
 const attrs: HTMLAttributes<'svg'> = {};
@@ -18,7 +19,8 @@ if (size) attrs.style = { '--size': size };
 const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString(36);
 ---
 
-<svg
+<span class={tooltip ? 'tooltip' : ''}>
+	<svg
 	xmlns="http://www.w3.org/2000/svg"
 	width="40"
 	height="40"
@@ -28,6 +30,7 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 	fill={gradient ? `url(#${gradientId})` : color}
 	{...attrs}
 >
+
 	<g set:html={iconPath} />
 	{
 		gradient && (
@@ -45,12 +48,53 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 			</linearGradient>
 		)
 	}
-</svg>
+
+	</svg>
+
+			
+	{
+		tooltip && (
+			<span class="tooltip-text">{tooltip}</span>
+		)
+	}
+</span>
 
 <style>
 	svg {
 		vertical-align: middle;
 		width: var(--size, 1em);
 		height: var(--size, 1em);
+	}
+
+	/* Tooltip container */
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+	}
+
+	/* Tooltip text */
+	.tooltip .tooltip-text {
+		visibility: hidden;
+		width: 120px;
+		background-color: rgb(69, 59, 88);
+		color: #fff;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+		
+		/* Position the tooltip text - see examples below! */
+		position: absolute;
+		z-index: 1;
+
+		width: 120px;
+		top: 100%;
+		left: 50%;
+		margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+	}
+
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltip-text {
+		visibility: visible;
 	}
 </style>
