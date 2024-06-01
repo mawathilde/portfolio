@@ -1,6 +1,6 @@
 ---
 title: Wizards Story
-publishDate: 2024-05-22
+publishDate: 2019-12-01
 img: /assets/ws-cover.jpg
 img_alt: Wizards Story Banner
 description: |
